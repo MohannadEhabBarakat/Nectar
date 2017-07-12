@@ -2,24 +2,23 @@ function ar() {
     document.getElementById('en-nav').style.display = "none";
     document.getElementById('ar-nav').style.display = "block";
 
-    var etxt = document.getElementsByClassName("entxt");
-    var atxt = document.getElementsByClassName("artxt");
-    for (i = 0; i < etxt.length; i++) {
-        etxt[i].style.display = "none";
-        atxt[i].style.display = "block";
-    }
+    //    var etxt = document.getElementsByClassName("entxt");
+    //    var atxt = document.getElementsByClassName("artxt");
+    //    for (i = 0; i < etxt.length; i++) {
+    //       // etxt[i].style.display = "none";
+    //    } 
 }
 
 function en(x) {
     x = x || 0;
     document.getElementById('en-nav').style.display = "block";
     document.getElementById('ar-nav').style.display = "none";
-    var etxt = document.getElementsByClassName("entxt");
-    var atxt = document.getElementsByClassName("artxt");
-    for (i = 0; i < etxt.length; i++) {
-        etxt[i].style.display = "block";
-        atxt[i].style.display = "none";
-    }
+    //    var etxt = document.getElementsByClassName("entxt");
+    //    var atxt = document.getElementsByClassName("artxt");
+    //    for (i = 0; i < etxt.length; i++) {
+    //        etxt[i].style.display = "block";
+    //        atxt[i].style.display = "none";
+    //    }
 }
 
 
@@ -39,27 +38,22 @@ function arvsen() {
         txt = url.split("#")[1];
         if (txt == "About") {
             document.getElementById("ifAbout").src = "/pages/About/About.html";
-        }
-        else if (txt == "Industry") {
+        } else if (txt == "Industry") {
             document.getElementById("ifIndustry").src = "/pages/Industry/Industry.html";
-        }
-        else if (txt == "Team") {
+        } else if (txt == "Team") {
             document.getElementById("ifTeam").src = "/pages/Team/Team.html";
-        }
-        else if (txt == "Competetions") {
+        } else if (txt == "Competetions") {
             document.getElementById("ifCompetetions").src = "/pages/Competetions/Competetions.html";
-        }
-        else if (txt == "Media") {
+        } else if (txt == "Media") {
             document.getElementById("ifMedia").src = "/pages/Media/Media.html";
-        }
-        else if (txt == "Parteners") {
+        } else if (txt == "Parteners") {
             document.getElementById("ifParteners").src = "/pages/Parteners/Parteners.html";
-        }
-        else if (txt == "Services") {
+        } else if (txt == "Services") {
             document.getElementById("ifServices").src = "/pages/Services/Services.html";
-        }
-        else if (txt == "News") {
+        } else if (txt == "News") {
             document.getElementById("ifNews").src = "/pages/News/News.html";
+        } else if (txt == "Aboutar") {
+            document.getElementById("ifAboutar").src = "/pages/Aboutar/Aboutar.html";
         }
     } else {
         en();
@@ -74,8 +68,8 @@ function wait() {
 
 var xa = Array;
 var ia = 0;
-var c="";
-var c2="";
+var c = "";
+var c2 = "";
 Dropzone.options.myAwesomeDropzone = {
     paramName: "file", // The name that will be used to transfer the file
     maxFilesize: 1, // MB
@@ -83,10 +77,10 @@ Dropzone.options.myAwesomeDropzone = {
     maxFiles: 1,
     resizeWidth: 250,
     renameFilename: function (filename) {
-        xa[ia] = new Date().getTime() + '_' ;
+        xa[ia] = new Date().getTime() + '_';
         ia = ia + 1;
-        c=xa[ia - 1]+ filename;
-        return c; 
+        c = xa[ia - 1] + filename;
+        return c;
     },
     maxfilesexceeded: function (file) {
         this.removeAllFiles();
@@ -101,7 +95,7 @@ Dropzone.options.myzone = {
     acceptedFiles: ".pdf",
     maxFiles: 1,
     renameFilename: function (filename) {
-        c2=xa[ia - 1]+filename;
+        c2 = xa[ia - 1] + filename;
         return c2;
     },
     maxfilesexceeded: function (file) {
@@ -200,22 +194,28 @@ function next(x) {
 
 
 function mail() {
-    var text = "<h2 style='text-align:center;color:blue;'>I'm " + name + "<sub>(" + Gender + ")</sub></h2><h3 style='text-align:center;'>I live in " + city + "</h3>" + "<p> I was Borne " + Birth + "</p><br><p>I have finshed " + Qualification + "</p><br><p style:'color:red;'> It will be my pleasure to help in " + Specialization + " department</p><br><hr><p>Please fell free to contact me on </p><br><ul><li><a href='"+FB+"'> Facebook "+ FB +"</a></li><li><a href='"+linkedin+"'> Linked In "+ linkedin +"</a></li><li> My phone number is " + Phone + "</li></ul>" + " For my CV and my Photo please cheak the attached files ";
+    var text = "<head>    <meta http-equiv='Content-Type' content='text/html;' charset='utf-8' /></head><h2 style='text-align:center;color:blue;'>I'm " + name + "<sub>(" + Gender + ")</sub></h2><h3 style='text-align:center;'>I live in " + city + "</h3>" + "<p> I was Borne " + Birth + "</p><br><p>I have finshed " + Qualification + "</p><br><p style:'color:red;'> It will be my pleasure to help in " + Specialization + " department</p><br><hr><p>Please fell free to contact me on </p><br><ul><li><a href='" + FB + "'> Facebook " + FB + "</a></li><li><a href='" + linkedin + "'> Linked In " + linkedin + "</a></li><li> My phone number is " + Phone + "</li></ul>" + " For my CV and my Photo please cheak the attached files ";
     $.ajax({
         url: 'benectarian.php',
         data: {
             text: text,
             x: c,
             xp: c2,
-            name:name
+            name: name
         },
         success: function (data) {
             if (data == 1) {
                 $(".final_alert").css("visibility", "visible");
-            }else{
+            } else {
                 alert(data)
             }
         }
 
     });
 }
+
+
+
+
+
+//the gard. of .., 3

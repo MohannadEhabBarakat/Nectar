@@ -51,7 +51,7 @@
                     <a href="#Services"><i class="fa fa-laptop color-12"></i>Services plant</a>
                 </li>
                 <li>
-                    <a href="#About"><i class="fa-comment fa color-1"></i>About&nbsp;our&nbsp;solar&nbsp;system</a>
+                    <a href="#About" onclick="speedup('About')"><i class="fa-comment fa color-1"></i>About&nbsp;our&nbsp;solar&nbsp;system</a>
                 </li>
                 <li>
                     <a href="#Industry"><i class="fa-wrench fa color-12"></i>Industry plant</a>
@@ -99,7 +99,7 @@
                     <a href="#Servicesar"><i class="fa fa-laptop color-12"></i>كوكب الخدمات</a>
                 </li>
                 <li>
-                    <a href="#Aboutar"><i class="fa-comment fa color-1"></i>عن مجموعتنا الشمسية</a>
+                    <a href="#Aboutar" onclick="speedup('Aboutar')"><i class="fa-comment fa color-1"></i>عن مجموعتنا الشمسية</a>
                 </li>
                 <li>
                     <a href="#underconstractionar"><i class="fa-wrench fa color-12"></i>كوكب الصناعه</a>
@@ -154,6 +154,7 @@
                                 <div class='six small-6 columns contact-box space'>
                                     <div class='color-1' onclick="speedup('About')">
                                         <a href='#About'>
+                                        
                                             <span class='box-title'>About Nectar solar system</span>
                                             <br/>
                                             <i class='fa-comment fa fa-4x'></i>
@@ -171,7 +172,7 @@
                                     </div>
                                 </div>
                                 <div class='twelve large-12 columns space featured blog-box medium'>
-                                    <div class='color-4' onclick="speedup('Team')"> <span class='box-title anim'><a href='#Successstories'>Success Stories</a></span>
+                                    <div class='color-4' onclick="speedup('Team')"> <span class='box-title anim'><a href='#Team'>Success Stories</a></span>
                                         <span class='featured-image'>
                                  <img width="400" height="400" src="assets/images/1.jpg" alt="some tile" />
                                  </span>
@@ -184,11 +185,11 @@
                                 <div class='twelve large-12 columns space testimonials-box medium'>
                                     <div class='color-3' onclick="speedup('Parteners')">
                                         <a href='#Parteners'>
-                                            <span class='box-title anim'>Partenares</span>
+                                            <span class='box-title anim'>Success Partenares</span>
                                             <ul class='testimonials'>
                                                 <li>
                                                     <blockquote>
-                                                        <p><img src="assets/images/misrelkheir.png" width="50px">To become a pioneering sustainable development organization to be heeded internationally.</p>
+                                                        <p><img src="assets/images/mis.png" width="50px">To become a pioneering sustainable development organization to be heeded internationally.</p>
                                                         <cite>Misr El-kheir</cite>
                                                     </blockquote>
                                                 </li>
@@ -256,7 +257,7 @@
                         <div class="four large-4 columns">
                             <div class="row">
                                 <div class='twelve small-12 columns twitter-feed-box space'>
-                                    <div class='color-8'>
+                                    <div class='color-8' onclick="speedup('News')" >
                                         <span class='box-title' style="margin-left: -50px;"><i class="fa fa-wpexplorer fa-flip-horizontal"></i> <a href="#News">&nbsp; Nactar galactical NEWS<sub>Read more.</sub></a></span>
                                         <div class='wd-tweets'>
                                             <ul>
@@ -316,9 +317,15 @@
                     </div>
                     <div class="copyright">© 2016 Nectar foundation All rights reserved.
                         <hr>
-                        <a href="" class="gfy"><i class="fa fa-youtube-square fa-2x"></i></a>
-                        <a href="" class="gfy"><i class="fa fa-facebook-official fa-2x"></i></a>
-                        <a href="" class="gfy"><i class="fa fa-github fa-2x"></i></a>
+                        <a href="https://www.youtube.com/channel/UCUvgqTR4MuADvwlGcmr76TQ" class="gfy" target="_blank"><i class="fa fa-youtube-square fa-2x"></i></a>
+                        
+                        
+                        <a href="https://www.facebook.com/Nectar-Foundation-2053893714834822/" class="gfy" target="_blank"><i class="fa fa-facebook-official fa-2x"></i></a>
+                        
+                        
+                        <a href="https://twitter.com/NectarFoundatio?lang=en" class="gfy" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -336,8 +343,8 @@
                     <a class="showMenu" href="index.html#home"><i class="fa-home fa icon-x back"></i></a>
                     <a class="showMenu"><i class="fa-bars fa icon-x back"></i></a>
                     <a class="showMenu"><i class="fa-search fa icon-x back"></i></a>
-                    <a href="#Aboutar" class="lang ar_inactive" onclick="ar()">AR</a>
-                    <a href="#About" class="lang en_active" onclick="en()">EN</a>
+                    <a href="#Aboutar" class="lang ar_inactive" onclick="ar(); speedup('Aboutar')">AR</a>
+                    <a href="#About" class="lang en_active" onclick="en() speedup('About')">EN</a>
                 </div>
             </div>
             <iframe id="ifAbout" width="100%" height="80%"></iframe>
@@ -454,24 +461,7 @@
                     <a href="#Media" class="lang en_active" onclick="en()">EN</a>
                 </div>
             </div>
-            <div class="row menu-row artxt">
-                <div class="large-4 columns menu-button text-right">
-                    <a class="showMenu" href="#homear"><i class="fa-home fa icon-x back"></i></a>
-                    <a class="showMenu"><i class="fa-bars fa icon-x back"></i></a>
-                    <a class="showMenu"><i class="fa-search fa icon-x back"></i></a>
-                    <a class="lang ar_active" onclick="ar()">AR</a>
-                    <a class="lang en_inactive" onclick="en()">EN</a>
-                </div>
-                <div class="large-7 columns p-l-0">
-                    <h2>كوكب الاعلام</h2>
-                    <hr class="title-hr">
-                </div>
-                <div class="go-back">
-                    <i class="fa-arrow-right fa icon-x back" onclick="window.history.back()"></i>
-                </div>
-            </div>
-
-            <iframe id="ifMedia" src="" width="100%" height="7840"></iframe>
+            <iframe id="ifMedia"  width="100%" height="80%" onload=""></iframe>
 
         </section>
         <section class="page-section Services-page page-section-63 en">
@@ -681,182 +671,9 @@
                     <a href="#News" class="lang en_active" onclick="en()">EN</a>
                 </div>
             </div>
-            <div class="large-8" style="margin:auto;">
-                <ul>
-                    <li>
-                        <table>
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img src="logotrans.jpg" alt="UNESCO IBSP Program" width="100" height="100">
-                                        <figcaption>UNESCO IBSP Program<br> Date:Dec.2013</figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>UNESCO IBSP Program:</h3>
-                                    <p>Prepared a comprehensive technical report for the science education internet portal. The portal will include different modules as Inquiry-Based science education, research methodology and projects, and basic science education.</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <hr class="about-hr">
-                    </li>
-                    <li>
-                        <table>
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img src="assets/images/Pennsylvania%20State%20University1.JPG" alt="USA Visit" width="100" height="100">
-                                        <figcaption>USA Visit<br> Date:Sep.2014</figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>USA Visit:</h3>
-                                    <p>Visit the center for Nanotechnology Education and Utilization (CNEU) and the National Science Foundation’s (NSF) Nanotechnology Application and Career Knowledge (NACK) Network at the Pennsylvania State University, to discuss possible collaboration with the CNEU in developing graduate educational programs for students and technical staff in Egypt and Middle East. In addition, opportunities of promoting nanotechnology education in local universities have been explored.</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <hr class="about-hr">
-                    </li>
-                    <li>
-                        <table>
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img src="assets/images/2.jpg" alt="UNESCO / MOHE High Level Forum" width="100" height="100">
-                                        <figcaption>UNESCO / MOHE High Level Forum<br> Date:November2014,23<sup>rd</sup> </figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>UNESCO / MOHE High Level Forum:</h3>
-                                    <p>NECTAR foundation represented the Egyptian specialized NGOs on Education and research field during the round table discussion about “Galvanizing Higher Education &amp; Scientific Research towards an Innovation Economy”</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <hr class="about-hr">
-                    </li>
-                    <li>
-                        <table>
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img src="assets/images/2.jpg" alt="UNESCO / MOHE High Level Forum" width="100" height="100">
-                                        <figcaption>UNESCO / MOHE High Level Forum <br> Date:November2014,24<sup>th</sup></figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>UNESCO / MOHE High Level Forum:</h3>
-                                    <p>NECTAR foundation represented the Egyptian specialized NGOs on Education and research field during the round table discussion about “Galvanizing Education towards a Knowledge-based Economy"</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <hr class="about-hr">
-                    </li>
-                    <li>
-                        <table>
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img src="logotrans.jpg" alt="ISC Arab – Qatar" width="100" height="100">
-                                        <figcaption>ISC Arab – Qatar <br> Date:November2014</figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>ISC Arab – Qatar:</h3>
-                                    <p>Dr. Ehab Barakat (NFD FOUNDER) co-chairing the judges committee, leading and training the judges through an induction session, and nominated to winners.</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <hr class="about-hr">
-                    </li>
-                    <li>
-                        <table>
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img src="assets/images/Announcing%20winners.JPG" alt="Intel ISEF – Egypt" width="100" height="100">
-                                        <figcaption>Intel ISEF – Egypt<br> Date:Feb.2015</figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>Intel ISEF – Egypt:</h3>
-                                    <p>NECTAR judging team assigned to manage and lead the judging committee, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <hr class="about-hr">
-                    </li>
-                    <li>
-                        <table>
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img src="assets/images/13.JPG" alt="Intel ISEF – Upper Egypt" width="100" height="100">
-                                        <figcaption>Intel ISEF – Upper Egypt<br>Date:Dec.2013</figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>Intel ISEF – Upper Egypt:</h3>
-                                    <p>NECTAR judging team assigned to manage and lead the judging committee, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <hr class="about-hr">
-                    </li>
-                    <li>
-                        <table>
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img src="assets/images/6-1.jpg" alt="Qatar STEAM Fair" width="100" height="100">
-                                        <figcaption>Qatar STEAM Fair<br> Date:March.2015</figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>Qatar STEAM Fair:</h3>
-                                    <p>Dr. Ehab Barakat (NFD FOUNDER) co-chairing the judges committee, played an important role in the scientific review committee, leading and training the judges through an induction session, appraising the wining projects nominated to Intel ISEF 2015 and preparing the Intel ISEF 2015 finalist.</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <hr class="about-hr">
-                    </li>
-                    <li>
-                        <table>
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img src="logotrans.jpg" alt="Kuwait Science and Engineering Fair" width="100" height="100">
-                                        <figcaption>Kuwait Science and Engineering Fair<br>Date:April.2015</figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>Kuwait Science and Engineering Fair:</h3>
-                                    <p>NECTAR founder invited as trainer and co-chair for the judging committee.</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <hr class="about-hr">
-                    </li>
-                    <li>
-                        <table>
-                            <tr>
-                                <td>
-                                    <figure>
-                                        <img src="logotrans.jpg" alt="Misr Elkhir Foundation" width="100" height="100">
-                                        <figcaption>Misr Elkhir Foundation<br> Date:Jan.2015</figcaption>
-                                    </figure>
-                                </td>
-                                <td>
-                                    <h3>Misr Elkhir Foundation:</h3>
-                                    <p>In January of 2015 , a financing concrete agreement has been signed to donate with The electronic program of the scientific competitions judging , which was created according to the suggestion of Dr. Ihab Barakat , the founder of NECTAR foundation , and he also designed the program and supervised on its making.</p>
-                                </td>
-                            </tr>
-                        </table>
-                        <hr class="about-hr">
-                    </li>
-                </ul>
-            </div>
+            <iframe id="ifNews" src="" width="100%" height="4475"></iframe>
         </section>
-
+            
         <section class="page-section homear-page ar">
             <div class="row metro-panel">
                 <div class="large-12 columns">
@@ -887,7 +704,7 @@
                         <div class="four large-4 columns">
                             <div class="row">
                                 <div class='six small-6 columns contact-box space'>
-                                    <div class='color-1'>
+                                    <div class='color-1' onclick="speedup('Aboutar')">
                                         <a href='#Aboutar'>
                                             <span class='box-title'>عن مجموعة نكتار الشمسيه</span>
                                             <br/>
@@ -1066,14 +883,16 @@
         </section>
         <section class="page-section Aboutar-page page-section-60 ar">
             <div class="row menu-row">
+                
                 <div class="large-4 columns menu-button text-right">
+                    
                     <a class="showMenu" href="#homear"><i class="fa-home fa icon-x back"></i></a>
                     <a class="showMenu"><i class="fa-bars fa icon-x back"></i></a>
                     <a class="showMenu"><i class="fa-search fa icon-x back"></i></a>
-                    <a href="#Aboutar" class="lang ar_active" onclick="ar()">AR</a>
-                    <a href="#About" class="lang en_inactive" onclick="en()">EN</a>
+                    <a href="#Aboutar" class="lang ar_active" onclick="ar();speedup('Aboutar')">AR</a>
+                    <a href="#About" class="lang en_inactive" onclick="en();speedup('About')">EN</a>
                 </div>
-                <div class="large-7 columns p-l-0">
+                 <div class="large-7 columns p-l-0">
                     <h2>-عن نكتار -نكتار من التليسكوب</h2>
                     <hr class="title-hr">
                 </div>
@@ -1081,29 +900,9 @@
                     <i class="fa-arrow-right fa icon-x back" onclick="window.history.back()"></i>
                 </div>
             </div>
-            <div class="row clear-fix">
-                <div class="large-12 columns page-sub-title text-right">
-                    <p><span class="imp-ar-word">تهدف</span> مؤسسة نكتار الغير قائمة علي الربحية الي احياء دور "الاقتصاد القائم علي المعرفة" في المجتمع وذلك بصب تركيزها علي محورين أساسيين أولهما تطوير قدرات و مهارات كلا من: الباحث والمدرب وذلك عن طريق التعليم والتدريب لجميع المراحل التعليمية باختلافها وبناء عليه يأتي المحور الثاني وهو السعى على احتضان تنفيذ مشاريع تكنولوجية واقتصادية وانتاجية مبنية على فكر ريادة الاعمال لترقي بالمجتمع ككل
-                    </p>
-                </div>
-                <hr class="about-hr">
-                <div class="large-12 columns page-sub-title text-right">
-                    <p><span class="imp-ar-word">نعتقد</span> في المؤسسة أن لكل فرد في المجتمع دور رئيسي نعمل علي تفعيله عن طريق تحفيز المعرفة في الجامعات والمعاهد العلمية ومراكز الابتكار وقطاع الانتاج ,وبترسيخ هذه الثقافة في أعماق المجتمع سيتولد لنا جيلا يعي قيمة المعرفة ليدفع بدفة المجتمع الي الثراء المعرفي و النهضة الشاملة.
+             <iframe id="ifAboutar" src="" width="100%" height="80%"></iframe>
 
-                    </p>
-                </div>
-                <hr class="about-hr">
-                <div class="large-12 columns page-sub-title text-right">
-                    <p><span class="imp-ar-word">فريقنا</span> انما هو مزيج من شتي المجالات المعرفية التعليمية والصناعية باختلافها ويجمعهم نسق شعوري وشغف واحد لتطوير وتقديم الخدمات اللتي تعمل بدورها في تطوير المنظومة المعرفية ككل لخدمة الباحث ورائد الاعمال برؤية ومسعي واضحين للوصول الي الغاية العليا المتمثله في احياء دور الاقتصاد المبني على المعرفة وذلك ايمانا منا بأن الهدف الأسمي لن يتحقق الا بتوافر الشغف وحب العطاء الذي يدفعنا قدما للرقي به
-                    </p>
-                </div>
-                <hr class="about-hr">
-                <div class="large-12 columns page-sub-title text-right">
-                    <p><span class="imp-ar-word">نعتبر</span> في مؤسستنا أن الاشتراك في المسابقات العلمية ليس غاية انما هي أحد أهم الوسائل لاخراج جيل مصقل بالتجارب والمهارات العلمية والتدريب عن طريق تلك المسابقات واللتي تعتبر أول خطوط البداية للوصول الي باحث علمي بشكل مهني صحيح ومن ثم يكون هذا بمثابة اللبنه الأولي اللتي توضع لوجود ريادة اعمال ومشاريع اقتصادية راسخة.
-                    </p>
-                </div>
-            </div>
-        </section>
+            </section>
         <section class="page-section Teamar-page page-section-21 ar">
             <div class="row menu-row">
                 <div class="large-4 columns menu-button text-right">
@@ -1833,20 +1632,18 @@
 
 
     </div>
-
-    <script src="assets/js/dropzone.js"></script>
-    <script async type="text/javascript" src="assets/js/Services-filter.js"></script>
-    <script type='text/javascript' src='assets/js/mohannad.js'></script>
-    <script async type='text/javascript' src='assets/js/jquery/jquery.js'></script>
-    <script async type='text/javascript' src='assets/js/jquery/jquery-migrate.min.js'></script>
-    <script async type='text/javascript' src='assets/js/foundation.min.js'></script>
-    <script type='text/javascript' src='assets/js/modernizr.custom.js'></script>
+    <script type='text/javascript' src='assets/js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='assets/js/foundation.min.js'></script>
+    <script type='text/javascript' src="assets/js/dropzone.js"></script>
+    <script type='text/javascript' src='assets/js/jquery/jquery-migrate.min.js'></script>
+    <script async type='text/javascript' src='assets/js/modernizr.custom.js'></script>
     <script async type='text/javascript' src='assets/js/foundation/foundation.section.js'></script>
     <script async type='text/javascript' src='assets/js/responsiveslides.js'></script>
     <script async type='text/javascript' src='assets/js/scripts.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script async type='text/javascript' src='assets/js/first-time.js'></script>
-    <script type='text/javascript' src='assets/js/speed.js'></script>
+    <script async type='text/javascript' src='assets/js/speed.js'></script>
+    <script type='text/javascript' src='assets/js/mohannad.js'></script>
 
     <!-- Hotjar Tracking Code for nectarfoundation.org -->
     <script>

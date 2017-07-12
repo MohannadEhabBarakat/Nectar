@@ -1,4 +1,5 @@
 <?php
+ini_set('default_charset','UTF-8'); 
 require_once('PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer();
 
@@ -10,6 +11,8 @@ $mail->Username = 'info@nectarfoundation.org';                 // SMTP username
 $mail->Password = '1234567890987654321';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
+
+$mail->CharSet = 'UTF-8';
 
 $mail->setFrom('info@nectarfoundation.org', 'Info @ Nectar_benectarian');
 $mail->addAddress('info@nectarfoundation.org', 'Info @ Nectar_benectarian');     // Add a recipient
