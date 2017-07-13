@@ -38,14 +38,16 @@
         });
 
         function repeat() {
+            data=localStorage.getItem("data");
             c = JSON.parse(localStorage.getItem("data"));
+            localStorage.setItem("data", data);
             tdlen = c.x;
             var section = document.getElementsByTagName("section")[0];
             for (i = 0; i < tdlen ; i++) {
 
                 var div = document.createElement("div");
                 div.classList.add('td');
-                div.setAttribute("data-index", i + 4);
+                div.setAttribute("data-index", i+1);
                 div.setAttribute("data-im", c.data_im[i]);
                 div.setAttribute("data-url", c.urls_disp[i]);
                 section.appendChild(div);
@@ -148,23 +150,29 @@
                     document.getElementById("data").style.zIndex = "-100";
                     document.getElementById("data").style.opacity = 0.1;
                     document.body.style.background = "rgba(150, 150, 150, 0.619608)";
-                    x = $(this).data("index");
+                    var xx = $(this).data("index");
                     $("#figtext").text($(this).data("im"));
-                    x = Number(x);
-                    if (x == tdlen) {
+                    nexta = Number(xx);
+                    if (xx == tdlen) {
                         nextnum = "1";
-                    } else {
+                        prevnum = tdlen-1;
+                        
+                    } else if (xx == 1){
+                        nextnum = "2";
+                        prevnum = tdlen;      
+                               
+                    }else {
                         var nextnumtxt = Number($(this).data("index")) + 1;
                         nextnum = nextnumtxt.toString();
 
-                        var prevnumtxt = Number($(this).data("index"));
+                        var prevnumtxt = Number($(this).data("index"))-1;
                         prevnum = prevnumtxt.toString();
                     }
                 });
                 $(document).on("click", ".nxt", function () {
                     $("#figtext").text($(".td[data-index=" + nextnum + "]").data("im"));
                     document.getElementById("previmg").src = $(".td[data-index=" + nextnum + "]").data("url");
-                    prevnum = nextnum;
+                    prevnum = nextnum-1;
                     var xx = Number(nextnum);
                     if (xx == tdlen) {
                         nextnum = "1";
