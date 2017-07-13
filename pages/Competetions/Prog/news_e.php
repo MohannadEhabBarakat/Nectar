@@ -119,7 +119,8 @@ $p2->nodeValue = $p;
 $atag = new DOMElement('a');
 $td2->appendChild($atag);
 $atag->nodeValue = $a;
-$img->setAttribute("href",$asrc);
+$atag->setAttribute("href",$asrc);
+$atag->setAttribute("target","_blanck");
     
 $parent->setAttribute("id", "p".($maxNum+1));
 
