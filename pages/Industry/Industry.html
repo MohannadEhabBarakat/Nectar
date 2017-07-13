@@ -31,8 +31,7 @@
                                 for (i = 0; i < sp.length; i++) {
                                     sp[i].style.visibility = "visible";
                                 }
-                            }
-                            else {
+                            } else {
                                 sp = document.getElementsByClassName("sp");
                                 moha = 1;
                                 var i;
@@ -87,13 +86,15 @@
                 }, 500);
             })
         })
-
     </script>
 </head>
 
 <body>
     <style>
-        section{overflow-y: scroll;}
+        section {
+            overflow-y: scroll;
+        }
+        
         .large-4 {
             margin-top: 30px;
             margin-bottom: 30px;
@@ -102,7 +103,6 @@
         [class*="column"]+[class*="column"]:last-child {
             float: left;
         }
-
     </style>
     <button class="sp" style="background: #EE4400;z-index: 100;position: fixed;right: 0;"><a href="../log_out.php">log out</a></button>
 
@@ -191,9 +191,12 @@
             <i class="fa fa-plus-circle sp" aria-hidden="true" onclick="dis()" id="add"></i>
             <div id="flot">
                 <div>
-                    <span>Icon</span><input id="icon" type="text"><br><span>Name</span><input id="h_3" type="text"><br><span>Data</span><textarea id="par" type="text"></textarea><br><select id="color"><option value="orange-bg">Orange</option>
-<option value="green-bg">Green</option>
-<option value="pink-bg">Pink</option></select><button onclick="brn()" id="brn1">Save</button>
+                    <span>Icon</span><input id="icon" type="text"><br><span>Name</span><input id="h_3" type="text"><br><span>Data</span><textarea id="par" type="text"></textarea><br>
+                    <select id="color">
+                        <option value="orange-bg">Orange</option>
+                        <option value="green-bg">Green</option>
+                        <option value="pink-bg">Pink</option>
+                    </select><button onclick="brn()" id="brn1">Save</button>
                     <button onclick="cancel()">Calncel</button>
                 </div>
             </div>

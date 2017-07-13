@@ -39,7 +39,6 @@
 
         function repeat() {
             c = JSON.parse(localStorage.getItem("data"));
-            localStorage.setItem("data", c);
             tdlen = c.x;
             var section = document.getElementsByTagName("section")[0];
             for (i = 0; i < tdlen ; i++) {
