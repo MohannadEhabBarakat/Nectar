@@ -14,6 +14,7 @@ var i = 0;
 var img_url;
 var xa = Array;
 var ia = 0;
+var c;
 
 Dropzone.options.myDropzone = {
     paramName: "file", // The name that will be used to transfer the file
@@ -30,7 +31,7 @@ Dropzone.options.myDropzone = {
         this.removeAllFiles();
         this.addFile(file);
         $.ajax({
-            url: '../../img_del.php',
+            url: '../img_del.php',
             data: {
                 x: xa[xa.length - 1]
             },
@@ -61,7 +62,7 @@ function cancel() {
     $("#add").css("display", "block");
     if (ia > 0) {
         $.ajax({
-            url: '../../img_del.php',
+            url: '../img_del.php',
             data: {
                 x: xa[ia - 1]
             },
@@ -86,14 +87,16 @@ function edit(tis) {
     pa = dv.getElementsByTagName("p")[0].attributes;
 
     src = dv2.getElementsByTagName("img")[0].src;
-    
-    a = dv.getElementsByTagName("a")[0].innerHTML;
-    asrc = dv.getElementsByTagName("a")[0].href;
-
+    a="";
+    c=dv.getElementsByTagName("a")[0];
+    if (c!= undefined){
+        a = dv.getElementsByTagName("a")[0].innerHTML;
+        asrc = dv.getElementsByTagName("a")[0].href;
+    }
     var para0 = document.createElement("form");
     para0.classList.add('dropzone');
     para0.id = "myAwesomezone";
-    para0.action = "../../upload.php";
+    para0.action = "../upload.php";
     dv2.appendChild(para0);
     
     var para0_cap = document.createElement("textarea");
@@ -156,9 +159,9 @@ function edit(tis) {
             this.removeAllFiles();
             this.addFile(file);
             $.ajax({
-                url: '../../img_del.php',
+                url: '../img_del.php',
                 data: {
-                    x: "../../assets/images/" + x[x.length - 1]
+                    x: "../assets/images/" + x[x.length - 1]
                 },
                 success: function (data) {
                     alert("hi " + data);
@@ -208,7 +211,7 @@ function edit_cancel(ths) {
     dv.getElementsByTagName("textarea")[0].remove();
     dv.getElementsByTagName("textarea")[0].remove();
     dv.getElementsByTagName("form")[0].remove();
-
+    
     var para0 = document.createElement("img");
     para0.setAttribute("src", src);
     para0.setAttribute("width", "100");
@@ -231,19 +234,20 @@ function edit_cancel(ths) {
     para4.appendChild(node4);
     dv3.appendChild(para4);
     
-    var para5 = document.createElement("a");
-    var node5 = document.createTextNode(a);
-    para5.appendChild(node5);
-    para5.setAttribute("href", asrc);
-    dv3.appendChild(para5);
-
+    if (c != undefined ){
+        var para5 = document.createElement("a");
+        var node5 = document.createTextNode(a);
+        para5.appendChild(node5);
+        para5.setAttribute("href", asrc);
+        dv3.appendChild(para5);
+    }
     dv.getElementsByClassName("edit_b")[0].style.display = "none";
     dv.getElementsByClassName("edit_b")[1].style.display = "none";
     if (i > 0) {
         $.ajax({
             url: '../img_del.php',
             data: {
-                x: "../../assets/images/" + x[i - 1]
+                x: "../assets/images/" + x[i - 1]
             },
             success: function (data) {
                 alert("hi " + data);
@@ -261,9 +265,9 @@ $(document).ready(function () {
 
         var dv = this.parentElement.parentElement;
         if (i > 0) {
-            img_url = "../../../assets/images/" + x[i - 1];
+            img_url = "../../assets/images/" + x[i - 1];
             $.ajax({
-            url: '../../img_del_url.php',
+            url: '../img_del_url.php',
             data: {
                 x: src
             },
@@ -304,7 +308,7 @@ $(document).ready(function () {
 
 function brn() {
     if (ia > 0) {
-        var img = "../../../assets/images/" + xa[ia - 1];
+        var img = "../../assets/images/" + xa[ia - 1];
     } else {
         var img = "";
     }

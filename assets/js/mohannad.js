@@ -80,8 +80,15 @@ function wait() {
     document.getElementById('landpage').classList.remove("page-section-current");
 }
 
+function ar_men_close() {
+    $('#ar-nav').css("left","-355px");
 
-
+}
+$(document).ready(function () {
+    $('.ar .fa-bars').click(function () {
+        $('#ar-nav').css("left","0px");
+    })
+});
 
 
 

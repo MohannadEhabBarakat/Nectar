@@ -30,7 +30,7 @@ Dropzone.options.myDropzone = {
         this.removeAllFiles();
         this.addFile(file);
         $.ajax({
-            url: '../../img_del.php',
+            url: '../img_del.php',
             data: {
                 x: xa[xa.length - 1]
             },
@@ -61,7 +61,7 @@ function cancel() {
     $("#add").css("display", "block");
     if (ia > 0) {
         $.ajax({
-            url: '../../img_del.php',
+            url: '../img_del.php',
             data: {
                 x: xa[ia - 1]
             },
@@ -93,7 +93,7 @@ function edit(tis) {
     var para0 = document.createElement("form");
     para0.classList.add('dropzone');
     para0.id = "myAwesomezone";
-    para0.action = "../../upload.php";
+    para0.action = "../upload.php";
     dv2.appendChild(para0);
     
     var para0_cap = document.createElement("textarea");
@@ -156,9 +156,9 @@ function edit(tis) {
             this.removeAllFiles();
             this.addFile(file);
             $.ajax({
-                url: '../../img_del.php',
+                url: '../img_del.php',
                 data: {
-                    x: "../../assets/images/" + x[x.length - 1]
+                    x: "../assets/images/" + x[x.length - 1]
                 },
                 success: function (data) {
                     alert("hi " + data);
@@ -243,7 +243,7 @@ function edit_cancel(ths) {
         $.ajax({
             url: '../img_del.php',
             data: {
-                x: "../../assets/images/" + x[i - 1]
+                x: "../assets/images/" + x[i - 1]
             },
             success: function (data) {
                 alert("hi " + data);
@@ -261,9 +261,9 @@ $(document).ready(function () {
 
         var dv = this.parentElement.parentElement;
         if (i > 0) {
-            img_url = "../../../assets/images/" + x[i - 1];
+            img_url = "../../assets/images/" + x[i - 1];
             $.ajax({
-            url: '../../img_del_url.php',
+            url: '../img_del_url.php',
             data: {
                 x: src
             },
@@ -304,7 +304,7 @@ $(document).ready(function () {
 
 function brn() {
     if (ia > 0) {
-        var img = "../../../assets/images/" + xa[ia - 1];
+        var img = "../../assets/images/" + xa[ia - 1];
     } else {
         var img = "";
     }
