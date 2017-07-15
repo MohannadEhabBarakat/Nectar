@@ -121,7 +121,11 @@ $td2->appendChild($atag);
 $atag->nodeValue = $a;
 $atag->setAttribute("href",$asrc);
 $atag->setAttribute("target","_blanck");
-    
+
+$hr = new DOMElement('hr');
+$li->appendChild($hr);
+$divch1->setAttribute("class", "about-hr");    
+
 $parent->setAttribute("id", "p".($maxNum+1));
 
 

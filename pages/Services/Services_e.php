@@ -102,7 +102,6 @@ $h_3->nodeValue = $h3;
     
 $p2 = new DOMElement('p');
 $dev1->appendChild($p2);
-$h_3->setAttribute("class", "text-left");
 $p2->nodeValue = $p;
 
 $parent->setAttribute("id", "p".($maxNum+1));
